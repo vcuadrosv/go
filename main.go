@@ -30,7 +30,7 @@ func main() {
 
 	/*Ejercicio*/
 
-	numero, mensaje := ejercicios.DevolverDosValores("mAÑANA")
+	numero, mensaje := ejercicios.DevolverDosValores("dsf")
 	fmt.Println("Número:", numero)
 	fmt.Println("Mensaje:", mensaje)
 }
