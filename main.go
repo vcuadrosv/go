@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"runtime"
-
+	/*"runtime"*/
 	/*"github.com/vcuadrosv/go/variables"*/
-	"github.com/vcuadrosv/go/ejercicios"
+	/*"github.com/vcuadrosv/go/ejercicios"*/
+	"github.com/vcuadrosv/go/teclado"
 )
 
 func main() {
@@ -14,11 +14,11 @@ func main() {
 	estado, texto := variables.ConvirtiendoaTexto(1588)
 	fmt.Println(estado)
 	fmt.Println(texto)*/
-	if os := runtime.GOOS; os == "linux" || os == "darwin" {
+	/*if os := runtime.GOOS; os == "linux" || os == "darwin" {
 		fmt.Println("Sistema Operativo: ", os)
 	} else {
 		fmt.Println("Esto es Windows")
-	}
+	}*/
 	/*Para realizarlo con multiples variables*/
 	/*switch os := runtime.GOOS; os {
 	case "linux":
@@ -28,9 +28,16 @@ func main() {
 	default:
 		fmt.Printf("%s \n", os)*/
 
-	/*Ejercicio*/
+	/*Ejercicio
 
 	numero, mensaje := ejercicios.DevolverDosValores("dsf")
 	fmt.Println("Número:", numero)
-	fmt.Println("Mensaje:", mensaje)
+	fmt.Println("Mensaje:", mensaje)*/
+
+	teclado.IngresoNumeros()
+
+	// La multiplicación ahora está dentro de la función IngresoNumeros
+	resultado := teclado.Numero1 * teclado.Numero2
+	fmt.Println("Resultado:", resultado)
+
 }
