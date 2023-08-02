@@ -3,10 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/vcuadrosv/go/iteraciones"
+	"github.com/vcuadrosv/go/ejercicios"
 	/*"runtime"
 	"github.com/vcuadrosv/go/variables"
-	"github.com/vcuadrosv/go/ejercicios"
 	"github.com/vcuadrosv/go/teclado"*/)
 
 func main() {
@@ -41,11 +40,18 @@ func main() {
 	resultado := teclado.Numero1 * teclado.Numero2
 	fmt.Println("Resultado:", resultado)*/
 
-	for {
+	/*for {
 		fmt.Println("hola")
 		break
 	}
 
-	iteraciones.Iterar()
+	iteraciones.Iterar()*/
+
+	numero := ejercicios.OtroNumero()
+	fmt.Println("Tabla del", numero)
+	for i := 1; i <= 10; i++ {
+		resultado := numero * i
+		fmt.Printf("%d x %d = %d\n", numero, i, resultado)
+	}
 
 }
