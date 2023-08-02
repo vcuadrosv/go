@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	/*"runtime"*/
-	/*"github.com/vcuadrosv/go/variables"*/
-	/*"github.com/vcuadrosv/go/ejercicios"*/
-	"github.com/vcuadrosv/go/teclado"
-)
+
+	"github.com/vcuadrosv/go/iteraciones"
+	/*"runtime"
+	"github.com/vcuadrosv/go/variables"
+	"github.com/vcuadrosv/go/ejercicios"
+	"github.com/vcuadrosv/go/teclado"*/)
 
 func main() {
 	/*variables.MuestroEnteros()
@@ -32,12 +33,19 @@ func main() {
 
 	numero, mensaje := ejercicios.DevolverDosValores("dsf")
 	fmt.Println("Número:", numero)
-	fmt.Println("Mensaje:", mensaje)*/
+	fmt.Println("Mensaje:", mensaje)
 
 	teclado.IngresoNumeros()
 
 	// La multiplicación ahora está dentro de la función IngresoNumeros
 	resultado := teclado.Numero1 * teclado.Numero2
-	fmt.Println("Resultado:", resultado)
+	fmt.Println("Resultado:", resultado)*/
+
+	for {
+		fmt.Println("hola")
+		break
+	}
+
+	iteraciones.Iterar()
 
 }
