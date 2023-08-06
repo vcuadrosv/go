@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/vcuadrosv/go/ejercicios"
+	"github.com/vcuadrosv/go/files"
 	/*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"*/)
@@ -47,11 +45,10 @@ func main() {
 
 	iteraciones.Iterar()*/
 
-	numero := ejercicios.OtroNumero()
-	fmt.Println("Tabla del", numero)
-	for i := 1; i <= 10; i++ {
-		resultado := numero * i
-		fmt.Printf("%d x %d = %d\n", numero, i, resultado)
-	}
+	//println(ejercicios.OtroNumero())
+
+	//files.SumTabla()
+
+	files.LeoArchivo()
 
 }
