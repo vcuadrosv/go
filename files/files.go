@@ -37,7 +37,23 @@ func Append(filen string, texto string) bool {
 		return false
 	}
 
-	_, err = arch.WriteString(texto) //perismos para grabar en el archivo
+	scanner := bufio.NewScanner(arch)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if line == texto {
+			fmt.Println("El texto ya está presente en el archivo.")
+			return false
+		}
+	}
+
+	// Agregar el texto al final del archivo
+	_, err = arch.Seek(0, 2) // Mover el cursor al final del archivo
+	if err != nil {
+		fmt.Println("Error al mover el cursor al final del archivo: " + err.Error())
+		return false
+	}
+
+	_, err = arch.WriteString(texto + "\n") //perismos para grabar en el archivo
 	if err != nil {
 		fmt.Println("Error durante el WriteString" + err.Error())
 		return false

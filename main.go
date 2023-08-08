@@ -47,7 +47,7 @@ func main() {
 
 	//println(ejercicios.OtroNumero())
 
-	//files.SumTabla()
+	files.SumTabla()
 
 	files.LeoArchivo()
 
