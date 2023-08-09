@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/vcuadrosv/go/files"
-	/*"runtime"
+	"github.com/vcuadrosv/go/funciones"
+	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
-	"github.com/vcuadrosv/go/teclado"*/)
+	"github.com/vcuadrosv/go/teclado"
+	*/)
 
 func main() {
 	/*variables.MuestroEnteros()
@@ -47,8 +48,10 @@ func main() {
 
 	//println(ejercicios.OtroNumero())
 
-	files.SumTabla()
+	//files.SumTabla()
 
-	files.LeoArchivo()
+	//files.LeoArchivo()
+
+	funciones.Calculos()
 
 }
