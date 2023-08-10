@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/vcuadrosv/go/funciones"
+	"github.com/vcuadrosv/go/mapas"
 	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"
@@ -52,6 +52,8 @@ func main() {
 
 	//files.LeoArchivo()
 
-	funciones.Exponencia(2)
+	//arreglos_slices.Capacidad()
+
+	mapas.MostrarMapas()
 
 }
