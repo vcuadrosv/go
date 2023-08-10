@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/vcuadrosv/go/mapas"
+	"github.com/vcuadrosv/go/users"
 	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"
@@ -54,6 +54,8 @@ func main() {
 
 	//arreglos_slices.Capacidad()
 
-	mapas.MostrarMapas()
+	//mapas.MostrarMapas()
+
+	users.AltaUsuarios()
 
 }
