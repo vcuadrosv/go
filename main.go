@@ -1,7 +1,8 @@
 package main
 
 import (
-	"github.com/vcuadrosv/go/users"
+	e "github.com/vcuadrosv/go/ejer_interfaces"
+	"github.com/vcuadrosv/go/modelos"
 	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"
@@ -56,6 +57,12 @@ func main() {
 
 	//mapas.MostrarMapas()
 
-	users.AltaUsuarios()
+	//users.AltaUsuarios()
+
+	pedro := new(modelos.Hombre)
+	e.HumanosRespirando(pedro)
+
+	andrea := new(modelos.Mujer)
+	e.HumanosRespirando(andrea)
 
 }
