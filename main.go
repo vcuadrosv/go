@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	a "github.com/vcuadrosv/go/gorutines"
+	"github.com/vcuadrosv/go/middelwares"
 	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"
@@ -67,10 +65,17 @@ func main() {
 	//e.HumanosRespirando(andrea)
 
 	//h.EjemploPanic()
+	/*canal1 := make(chan bool)
+	go a.MiNombreLentoo("valery Cuadros", canal1)
+	defer func() {
+		<-canal1
+	}()*/
+	//fmt.Println("Estoy aqui")
+	//var x string
+	//fmt.Scanln(&x)
 
-	go a.MiNombreLentoo("valery Cuadros")
-	fmt.Println("Estoy aqui")
-	var x string
-	fmt.Scanln(&x)
+	//webserver.MiWebServer()
+
+	middelwares.Mimiddelware()
 
 }
