@@ -1,8 +1,9 @@
 package main
 
 import (
-	e "github.com/vcuadrosv/go/ejer_interfaces"
-	"github.com/vcuadrosv/go/modelos"
+	"fmt"
+
+	a "github.com/vcuadrosv/go/gorutines"
 	/*"github.com/vcuadrosv/go/new"*/ /*"runtime"
 	"github.com/vcuadrosv/go/variables"
 	"github.com/vcuadrosv/go/teclado"
@@ -59,10 +60,17 @@ func main() {
 
 	//users.AltaUsuarios()
 
-	pedro := new(modelos.Hombre)
-	e.HumanosRespirando(pedro)
+	//pedro := new(modelos.Hombre)
+	//e.HumanosRespirando(pedro)
 
-	andrea := new(modelos.Mujer)
-	e.HumanosRespirando(andrea)
+	//andrea := new(modelos.Mujer)
+	//e.HumanosRespirando(andrea)
+
+	//h.EjemploPanic()
+
+	go a.MiNombreLentoo("valery Cuadros")
+	fmt.Println("Estoy aqui")
+	var x string
+	fmt.Scanln(&x)
 
 }
