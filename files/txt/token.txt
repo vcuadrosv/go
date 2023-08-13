@@ -1,0 +1,42 @@
+Imports System.Windows.Forms
+
+Public Class MainForm
+    Inherits Form
+
+    Private WithEvents txtToken As TextBox
+
+    Public Sub New()
+        txtToken = New TextBox()
+        Controls.Add(txtToken)
+
+        AddHandler txtToken.TextChanged, AddressOf txtToken_TextChanged
+    End Sub
+
+    Private Sub txtToken_TextChanged(sender As Object, e As EventArgs) Handles txtToken.TextChanged
+        Dim t, tf As String
+        Dim desde, hasta As Integer
+        t = txtToken.Text
+        desde = InStr(1, t, "access_token=")
+        hasta = InStr(desde, t, "&token_type=") - 13
+        tf = t.Substring(desde + 12, hasta - desde)
+        Clipboard.SetText(tf)
+        MessageBox.Show(tf)
+    End Sub
+
+    Public Shared Sub Main()
+        Application.Run(New MainForm())
+    End Sub
+End Class
+
+//Este codigo sirve para leer los tokens que envia cognito diariamente 
+//para hacerlo mas facil, fue adaptado a linux 
+ 
+/* Pasos para instalacion 
+
+1. Tener instalado Mono
+2. dentro del directorio de descarga guardar el codigo como un archivo .vb
+3. Ejecutar el comando con vbnc TokenExtractor.vb -out:TokenExtractor.e 
+yo he llamado el archivo TokenExtractor.vb
+4. Finalmente para habilitar la aplicacion se hace con mono TokenExtractor.exe
+Esto abrirar un aplicativo donde se ingresa la URL generada por cognito y proporciona el token 
+en el porta papeles
