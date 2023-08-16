@@ -1,2 +1,2 @@
 # Go
-Repositorio de Curso Go
+Repositorio de Go
